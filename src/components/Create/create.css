@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+	--Poppins: "Poppins", sans-serif;
+	--Roboto: "Roboto", sans-serif;
+}
+
+/**************************************************************************/
+/******************************    Create    ******************************/
+/**************************************************************************/
+
+.create-container {
+	width: 100vw;
+	background-image: url("../../assets/hero.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 50px;
+	padding-top: 120px;
+	padding-bottom: 100px;
+}
+
+.create-box {
+	width: 80%;
+	position: relative;
+	max-width: 1500px;
+	font-size: 16px;
+}
+
+.create-card {
+	width: 80%;
+	border-radius: 20px;
+	padding: 50px 30px;
+	text-align: center;
+	/*Frosted effect*/
+	background-color: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(5px);
+}
+
+.create-text {
+	color: #6cc027;
+	font-family: var(--Poppins);
+	font-size: 1.7em;
+	font-weight: 400;
+}
+
+.input_box {
+	background-color: #060b13 !important;
+	border: none !important;
+	outline: none !important;
+	font-size: 0.95em;
+	color: rgb(175, 175, 175) !important;
+	box-shadow: inset 5px 5px 6px #000205, inset -3px -3px 7px #101925 !important;
+}
+
+.input_box:active {
+	background-color: #060b13 !important;
+	border: none !important;
+	outline: none !important;
+}
+
+input::-webkit-file-upload-button {
+	display: none;
+}
+
+.upload_text {
+	font-size: 0.8em;
+}
+
+.upload {
+	border: none !important;
+	outline: none !important;
+	border-radius: 5px;
+	background: rgb(56, 158, 48);
+	margin-right: 15px;
+	color: rgb(233, 233, 233);
+	padding: 5px 12px 6px 12px;
+	font-size: 0.9em;
+}
+
+.upload:hover {
+	cursor: pointer;
+	background-color: rgb(32, 168, 23);
+	color: rgb(228, 228, 228) !important;
+}

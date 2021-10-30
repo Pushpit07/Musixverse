@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+	--Poppins: "Poppins", sans-serif;
+	--Roboto: "Roboto", sans-serif;
+}
+
+/**************************************************************************/
+/****************************    Dashboard    *****************************/
+/**************************************************************************/
+
+.dashboard-container {
+	width: 100vw;
+	background-image: url("../../assets/hero.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 50px;
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+
+.dashboard-box {
+	width: 90%;
+	position: relative;
+	max-width: 1500px;
+	font-size: 16px;
+}
+
+.dashboard-card {
+	border-radius: 16px;
+	padding: 40px 40px 40px 60px;
+	/*Frosted effect*/
+	background-color: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(5px);
+}
+
+.dashboard-text {
+	color: #6cc027;
+	font-family: var(--Poppins);
+	font-size: 1.3em;
+	font-weight: 400;
+	justify-content: center !important;
+	align-items: center !important;
+	margin-left: -30px;
+}
+
+.info_song_card_dashboard {
+	color: #fff !important;
+}
