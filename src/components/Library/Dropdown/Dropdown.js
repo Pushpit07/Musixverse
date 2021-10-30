@@ -6,9 +6,6 @@ export default function Dropdown(props) {
 
 	const handleOptionSelction = (event) => {
 		setButtonContent(event.target.textContent);
-		// After the state has been updated, we need to call the filtering function
-		// NOTE: now the dropdowns are being used in create page as well so 
-		// maintain some state to check whther to call filter or not
 	};
 
 	const options = props.optionsArray.map((option, key) => (
@@ -18,7 +15,7 @@ export default function Dropdown(props) {
 			</span>
 		</li>
 	));
-	
+
 	return (
 		<div className="dropdown library-dropdown">
 			<label className="dropdown-label">{props.children}:</label>
@@ -32,7 +29,7 @@ export default function Dropdown(props) {
 			>
 				{buttonContent}
 			</button>
-			
+
 			<ul className="dropdown-menu pt-3 pb-3" aria-labelledby="dropdownMenuButton1">
 				{options}
 			</ul>

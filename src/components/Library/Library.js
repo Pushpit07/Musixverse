@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 import "./library.css";
-import Dropdown from "./LibraryUtils/Dropdown/Dropdown";
-import SongPages from "./LibraryUtils/SongPages/SongPages";
+import Dropdown from "./Dropdown/Dropdown";
 
 export default function Library(props) {
 	const genres = ["Pop", "Classical", "Rap", "Indian", "Cultural"];
@@ -36,8 +36,26 @@ export default function Library(props) {
 							</div>
 						</div>
 
-						{/* PAGES SECTION */}
-						<SongPages songNFTs={props.songNFTs} />
+						{props.songNFTs.map((song, key) => {
+							return (
+								<Fragment key={key}>
+									<div className="song_card_component">
+										<Link to={`/song-info/${song.id}`}>
+											<div className="library_cards_cover_div">
+												<img
+													src={`https://ipfs.infura.io/ipfs/${song.imgHash}`}
+													alt="song cover"
+												/>
+												<div className="text-break">
+													<p className="info_song_card_dashboard">#{`${song.id}`}</p>
+													<span className="info_song_card_dashboard">{`${song.songName}`}</span>
+												</div>
+											</div>
+										</Link>
+									</div>
+								</Fragment>
+							);
+						})}
 					</div>
 				</div>
 			</div>
