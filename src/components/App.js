@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import Web3 from "web3";
 import Musixverse from "../abis/Musixverse.json";
-import "./App.css"; //Done
+import "./App.css";
 import Navbar from "./Layout/Navbar/Navbar";
-import Footer from "./Layout/Footer/Footer";
-import HomePage from "./Homepage/HomePage"; //Done
+import HomePage from "./Homepage/HomePage";
 import Library from "./Library/Library";
 import Create from "./Create/Create";
 import Dashboard from "./Dashboard/Dashboard";
@@ -320,7 +319,7 @@ function App() {
 	}
 
 	return (
-		<Router>
+		<HashRouter>
 			<ScrollToTop />
 			<Navbar account={account} />
 			{loading ? (
@@ -366,8 +365,7 @@ function App() {
 					</Switch>
 				</div>
 			)}
-			<Footer />
-		</Router>
+		</HashRouter>
 	);
 }
 

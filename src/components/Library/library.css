@@ -13,6 +13,7 @@
 .library_container {
 	width: 100vw;
 	background-image: url("../../assets/hero.svg");
+	min-height: 100vh;
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: flex;
@@ -20,7 +21,7 @@
 	justify-content: center;
 	align-items: center;
 	padding: 50px;
-	padding-top: 120px;
+	padding-top: 0px;
 	padding-bottom: 80px;
 }
 

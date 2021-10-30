@@ -16,7 +16,7 @@ export default function Library(props) {
 						<div className="library_card">
 							<div className="left_filters_section">
 								<p className="mxv_library_heading">MXV Library</p>
-								<p className="library_filters">Filters:</p>
+								<p className="library_filters">Filters: (This feature is not enabled for now)</p>
 								{/* DROPDOWNS */}
 								<Dropdown optionsArray={genres}>Genres</Dropdown>
 								<Dropdown optionsArray={lyrics}>Lyrics</Dropdown>
