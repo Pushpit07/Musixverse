@@ -1,6 +1,28 @@
 # Musixverse
 
+## Tech Used
+
+### Frontend
+<p align="left">
+<img src = "https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"/>
+<img src = "https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+<img src = "https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+<img src = "https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
+</p>
+
+### Smart Contract and Backend
+<p align="left">
+<img src = "https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black"/>
+<img src = "https://img.shields.io/badge/Solidity-e6e6e6?style=for-the-badge&logo=solidity&logoColor=black"/>
+</p>
+
 ## How to setup
+
+-   Fork the repo to your account
+
+-   Clone the forked repo to your local system using `git clone https://github.com/<your-username>/Musixverse`
+
+-   Connect your local repo to the upstream using `git remote add upstream https://github.com/Pushpit07/Musixverse`
 
 -   Run `npm install` to install npm dependencies
 
@@ -14,9 +36,11 @@
 
 ## How to contribute?
 
-**DO NOT** make and push changes to the main branch!
+- **DO NOT** make and push changes to the main branch!
 
-**ALWAYS** make changes to code by checking out to a different branch.
+- **Always** keep your main/working branch in sync with the main repository `git pull upstream main` on the branch you are working on locally.
+
+- **Always create a new branch** before making any changes `git checkout -b <new-branch-name>`, never ever make any changes directly on the master/main branch.
 
 ## Running the Test Script
 
