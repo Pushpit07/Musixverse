@@ -7,7 +7,9 @@ Musixverse is a decentralized platform where musicians can put up music/songs as
 
 Demo link- https://youtu.be/HUONGPOYTwU
 
-View presentation- https://drive.google.com/file/d/1Xfm9yfJzxHz0FGC_1iHdQLBJiLe5qyU1/view?usp=sharing
+View presentation- https://drive.google.com/file/d/15lEl9dQMQkOU8H2pYo0fcHowOaOpFw5p/view?usp=sharing
+
+Project pitch- https://youtu.be/x1Uwvio-8X4
 
 ## Tech Used
 
