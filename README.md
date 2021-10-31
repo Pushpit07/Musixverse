@@ -19,7 +19,7 @@ Musixverse is a decentralized platform where musicians can put up music/songs as
 </p>
 
 ### Other
-<p>IPFS, Ganache, Truffle, Web3, Metamask, Infura, Polkadot, Elasticsearch (for future uses)</p>
+<p>IPFS, Ganache, Truffle, Web3.js, Metamask, Infura, Polkadot, Elasticsearch (for future uses)</p>
 
 ## How to setup
 
