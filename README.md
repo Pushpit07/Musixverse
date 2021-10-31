@@ -16,6 +16,9 @@
 <img src = "https://img.shields.io/badge/Solidity-e6e6e6?style=for-the-badge&logo=solidity&logoColor=black"/>
 </p>
 
+### Other
+<p>IPFS, Ganache, Truffle, Web3, Metamask, Infura, Polkadot, Elasticsearch (for future uses)</p>
+
 ## How to setup
 
 -   Fork the repo to your account
