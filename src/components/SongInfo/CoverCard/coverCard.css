@@ -18,23 +18,6 @@
 	border-radius: 10px;
 }
 
-button.play-btn {
-	position: absolute;
-	right: 8px;
-	bottom: 7px;
-	border-radius: 50%;
-	width: 35px;
-	height: 35px;
-	color: #6cc027;
-	background-color: rgb(75, 75, 75);
-	margin: 0px;
-	border: none;
-}
-
-button.play-btn:hover {
-	background-color: rgb(82, 82, 82);
-}
-
 .not_for_sale_btn {
 	width: 100%;
 	color: #3b3b3b;

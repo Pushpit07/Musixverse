@@ -8,10 +8,6 @@ export default function CoverCard(props) {
 			<div className="row cover_card_row justify-content-center mb-4">
 				<div className="col-12 p-0">
 					<img className="album_cover" src={props.songCoverURL} width="100%" alt="album cover" />
-
-					<button className="play-btn">
-						<i className="fas fa-play"></i>
-					</button>
 				</div>
 			</div>
 
