@@ -1,6 +1,13 @@
 # Musixverse
 ![Musixverse Banner](https://user-images.githubusercontent.com/53931942/139572591-37cf0074-93f0-4612-9d1f-60b7ce35610f.PNG)
+
+<br/>
+
 Musixverse is a decentralized platform where musicians can put up music/songs as NFTs. These NFTs can then be traded and each time an NFT gets traded, the musician will receive a certain percent of the trade as royalty! The main essence of the platform is to uplift music creators as they really do not get enough recognition and monetary benefits or royalties from the current available sources.
+
+Demo link- https://youtu.be/HUONGPOYTwU
+
+View presentation- https://drive.google.com/file/d/1Xfm9yfJzxHz0FGC_1iHdQLBJiLe5qyU1/view?usp=sharing
 
 ## Tech Used
 
