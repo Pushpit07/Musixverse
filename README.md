@@ -1,4 +1,17 @@
 # Musixverse
+![Musixverse Banner](https://user-images.githubusercontent.com/53931942/139572591-37cf0074-93f0-4612-9d1f-60b7ce35610f.PNG)
+
+<br/>
+
+Musixverse is a decentralized platform where musicians can put up music/songs as NFTs. These NFTs can then be traded and each time an NFT gets traded, the musician will receive a certain percent of the trade as royalty! The main essence of the platform is to uplift music creators as they really do not get enough recognition and monetary benefits or royalties from the current available sources.
+
+Website link- http://musixverse.co/
+
+Demo link- https://youtu.be/HUONGPOYTwU
+
+View presentation- https://drive.google.com/file/d/15lEl9dQMQkOU8H2pYo0fcHowOaOpFw5p/view?usp=sharing
+
+Project pitch- https://youtu.be/x1Uwvio-8X4
 
 ## Tech Used
 
@@ -17,7 +30,7 @@
 </p>
 
 ### Other
-<p>IPFS, Ganache, Truffle, Web3, Metamask, Infura, Polkadot, Elasticsearch (for future uses)</p>
+<p>IPFS, Ganache, Truffle, Web3.js, Metamask, Infura, Polkadot, Elasticsearch (for future uses)</p>
 
 ## How to setup
 
