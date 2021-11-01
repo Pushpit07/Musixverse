@@ -4,6 +4,7 @@ import Web3 from "web3";
 import Musixverse from "../abis/Musixverse.json";
 import "./App.css";
 import Navbar from "./Layout/Navbar/Navbar";
+import Footer from "./Layout/Footer/Footer";
 import HomePage from "./Homepage/HomePage";
 import Library from "./Library/Library";
 import Create from "./Create/Create";
@@ -365,6 +366,7 @@ function App() {
 					</Switch>
 				</div>
 			)}
+			<Footer />
 		</HashRouter>
 	);
 }
