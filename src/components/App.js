@@ -9,6 +9,7 @@ import HomePage from "./Homepage/HomePage";
 import Library from "./Library/Library";
 import Create from "./Create/Create";
 import Dashboard from "./Dashboard/Dashboard";
+import ContactUs from "./ContactUs/ContactUs";
 import SongInfo from "./SongInfo/SongInfo";
 import ScrollToTop from "./Utils/ScrollToTop/ScrollToTop";
 const ipfsClient = require("ipfs-http-client");
@@ -362,6 +363,7 @@ function App() {
 							path="/dashboard"
 							render={() => <Dashboard account={account} songNFTs={songNFTs} />}
 						/>
+						<Route exact path="/contactus" component={ContactUs} />
 						<Redirect to="/" />
 					</Switch>
 				</div>
