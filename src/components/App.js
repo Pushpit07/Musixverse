@@ -12,6 +12,8 @@ import Dashboard from "./Dashboard/Dashboard";
 import ContactUs from "./ContactUs/ContactUs";
 import SongInfo from "./SongInfo/SongInfo";
 import ScrollToTop from "./Utils/ScrollToTop/ScrollToTop";
+import Trending from "./Trending/Trending";
+import Loading from "./Utils/Loading/Loading";
 const ipfsClient = require("ipfs-http-client");
 
 function App() {
@@ -324,16 +326,16 @@ function App() {
 		<HashRouter>
 			<ScrollToTop />
 			<Navbar account={account} />
-			{loading ? (
-				<div className="loading">Loading...</div>
-			) : (
-				<div>
-					<Switch>
-						<Route exact path="/" component={HomePage} />
-						<Route
-							exact
-							path="/song-info/:songId"
-							render={(props) => (
+			<div>
+				<Switch>
+					<Route exact path="/" component={HomePage} />
+					<Route
+						exact
+						path="/song-info/:songId"
+						render={(props) =>
+							loading ? (
+								<Loading />
+							) : (
 								<SongInfo
 									{...props}
 									account={account}
@@ -342,32 +344,41 @@ function App() {
 									toggleOnSale={toggleOnSale}
 									updatePrice={updatePrice}
 								/>
-							)}
-						/>
-						<Route exact path="/library" render={() => <Library songNFTs={songNFTs} />} />
-						<Route
-							exact
-							path="/create"
-							render={() => (
-								<Create
-									createSong={createSong}
-									captureImage={captureImage}
-									captureLyrics={captureLyrics}
-									captureSong={captureSong}
-									songNFTs={songNFTs}
-								/>
-							)}
-						/>
-						<Route
-							exact
-							path="/dashboard"
-							render={() => <Dashboard account={account} songNFTs={songNFTs} />}
-						/>
-						<Route exact path="/contactus" component={ContactUs} />
-						<Redirect to="/" />
-					</Switch>
-				</div>
-			)}
+							)
+						}
+					/>
+					<Route
+						exact
+						path="/library"
+						render={() => (loading ? <Loading /> : <Library songNFTs={songNFTs} />)}
+					/>
+					<Route
+						exact
+						path="/trending"
+						render={() => (loading ? <Loading /> : <Trending songNFTs={songNFTs} />)}
+					/>
+					<Route
+						exact
+						path="/create"
+						render={() => (
+							<Create
+								createSong={createSong}
+								captureImage={captureImage}
+								captureLyrics={captureLyrics}
+								captureSong={captureSong}
+								songNFTs={songNFTs}
+							/>
+						)}
+					/>
+					<Route
+						exact
+						path="/dashboard"
+						render={() => (loading ? <Loading /> : <Dashboard account={account} songNFTs={songNFTs} />)}
+					/>
+					<Route exact path="/contact-us" component={ContactUs} />
+					<Redirect to="/" />
+				</Switch>
+			</div>
 			<Footer />
 		</HashRouter>
 	);

@@ -84,7 +84,7 @@ function Footer() {
 									<div>Dashboard</div>
 								</Link>
 								<Link
-									to={"/contactus"}
+									to={"/contact-us"}
 									className="footer_links col-4 footer_hover_effect text-md-left text-center"
 								>
 									<div>Contact Us</div>
@@ -93,7 +93,7 @@ function Footer() {
 
 							<div className="row footer_hover_effect_row">
 								<Link
-									to={"/"}
+									to={"/trending"}
 									className="footer_links col-4 footer_hover_effect text-md-left text-center"
 								>
 									<div>Trending</div>

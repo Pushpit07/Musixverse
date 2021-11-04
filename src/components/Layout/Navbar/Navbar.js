@@ -51,6 +51,17 @@ export default function Navbar(props) {
 							Library
 						</NavLink>
 					</li>
+					<li className="nav-item m-4">
+						<NavLink
+							exact
+							to={"/trending"}
+							id="nav_wallet"
+							activeClassName="nav-active"
+							className="text_color nav-link"
+						>
+							Trending
+						</NavLink>
+					</li>
 				</ul>
 			</div>
 
