@@ -10,7 +10,6 @@ import Create from "./Create/Create";
 import Dashboard from "./Dashboard/Dashboard";
 import SongInfo from "./SongInfo/SongInfo";
 import ScrollToTop from "./Utils/ScrollToTop/ScrollToTop";
-import Trending from "./Trending/Trending";
 import Loading from "./Utils/Loading/Loading";
 const ipfsClient = require("ipfs-http-client");
 
@@ -321,7 +320,6 @@ function App() {
 						}
 					/>
 					<Route exact path="/library" render={() => (loading ? <Loading /> : <Library songNFTs={songNFTs} />)} />
-					<Route exact path="/trending" render={() => (loading ? <Loading /> : <Trending songNFTs={songNFTs} />)} />
 					<Route
 						exact
 						path="/create"
