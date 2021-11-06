@@ -30,58 +30,23 @@ export default function Navbar(props) {
 			<div className="justify-content-center order-2" id="nav_center_links">
 				<ul className="navbar-nav">
 					<li className="nav-item m-4">
-						<NavLink
-							exact
-							to={"/"}
-							id="nav_home"
-							activeClassName="nav-active"
-							className="text_color nav-link"
-						>
+						<NavLink exact to={"/"} id="nav_home" activeClassName="nav-active" className="text_color nav-link">
 							Home
 						</NavLink>
 					</li>
 					<li className="nav-item m-4">
-						<NavLink
-							exact
-							to={"/library"}
-							id="nav_library"
-							activeClassName="nav-active"
-							className="text_color nav-link"
-						>
+						<NavLink exact to={"/library"} id="nav_library" activeClassName="nav-active" className="text_color nav-link">
 							Library
-						</NavLink>
-					</li>
-					<li className="nav-item m-4">
-						<NavLink
-							exact
-							to={"/trending"}
-							id="nav_wallet"
-							activeClassName="nav-active"
-							className="text_color nav-link"
-						>
-							Trending
 						</NavLink>
 					</li>
 				</ul>
 			</div>
 
 			<div className="w-50 text-right order-1 order-md-last">
-				<NavLink
-					exact
-					to={"/create"}
-					id="nav_create"
-					activeClassName="nav-active"
-					className="nav-link navbar-text text_color"
-				>
+				<NavLink exact to={"/create"} id="nav_create" activeClassName="nav-active" className="nav-link navbar-text text_color">
 					Create
 				</NavLink>
-				<NavLink
-					exact
-					to={"/dashboard"}
-					id="nav_dashboard"
-					activeClassName="nav-active"
-					className="nav-link navbar-text m-4 text_color"
-				>
+				<NavLink exact to={"/dashboard"} id="nav_dashboard" activeClassName="nav-active" className="nav-link navbar-text m-4 text_color">
 					Dashboard
 				</NavLink>
 			</div>
