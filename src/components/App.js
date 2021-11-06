@@ -4,12 +4,10 @@ import Web3 from "web3";
 import Musixverse from "../abis/Musixverse.json";
 import "./App.css";
 import Navbar from "./Layout/Navbar/Navbar";
-import Footer from "./Layout/Footer/Footer";
 import HomePage from "./Homepage/HomePage";
 import Library from "./Library/Library";
 import Create from "./Create/Create";
 import Dashboard from "./Dashboard/Dashboard";
-import ContactUs from "./ContactUs/ContactUs";
 import SongInfo from "./SongInfo/SongInfo";
 import ScrollToTop from "./Utils/ScrollToTop/ScrollToTop";
 import Trending from "./Trending/Trending";
@@ -89,9 +87,7 @@ function App() {
 			await addPolygonTestnetNetwork();
 		} else {
 			// const web3 = new Web3(Web3.givenProvider || "http://localhost:7545");
-			window.web3 = new Web3(
-				new Web3.providers.HttpProvider("https://polygon-mumbai.infura.io/v3/6f89b4b5242a4191af04c7939d66d6e8")
-			);
+			window.web3 = new Web3(new Web3.providers.HttpProvider("https://polygon-mumbai.infura.io/v3/6f89b4b5242a4191af04c7939d66d6e8"));
 			window.alert(
 				"Non-Ethereum browser detected. You cannot perform any transactions on the blockchain, however you will still be able to watch all content present on the blockchain. To make transactions you should consider installing Metamask"
 			);
@@ -229,18 +225,7 @@ function App() {
 					const transactionParameters = {
 						to: "0xEf72d56A76e069f37453bB7ddB4aBd940FeA35D2", // Required except during contract publications.
 						from: account, // must match user's active address.
-						data: musixverse.methods
-							.createSong(
-								_name,
-								_artistName,
-								window.web3.utils.toWei(_price, "Ether"),
-								_imgHash,
-								_songHash,
-								_onSale,
-								_links,
-								_characteristics
-							)
-							.encodeABI(), //make call to NFT smart contract
+						data: musixverse.methods.createSong(_name, _artistName, window.web3.utils.toWei(_price, "Ether"), _imgHash, _songHash, _onSale, _links, _characteristics).encodeABI(), //make call to NFT smart contract
 					};
 
 					// Sign the transaction via Metamask
@@ -253,8 +238,7 @@ function App() {
 						window.location.reload();
 						return {
 							success: true,
-							status:
-								"Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" + txHash,
+							status: "Check out your transaction on Etherscan: https://ropsten.etherscan.io/tx/" + txHash,
 						};
 					} catch (error) {
 						return {
@@ -333,53 +317,20 @@ function App() {
 						exact
 						path="/song-info/:songId"
 						render={(props) =>
-							loading ? (
-								<Loading />
-							) : (
-								<SongInfo
-									{...props}
-									account={account}
-									songNFTs={songNFTs}
-									purchaseSong={purchaseSong}
-									toggleOnSale={toggleOnSale}
-									updatePrice={updatePrice}
-								/>
-							)
+							loading ? <Loading /> : <SongInfo {...props} account={account} songNFTs={songNFTs} purchaseSong={purchaseSong} toggleOnSale={toggleOnSale} updatePrice={updatePrice} />
 						}
 					/>
-					<Route
-						exact
-						path="/library"
-						render={() => (loading ? <Loading /> : <Library songNFTs={songNFTs} />)}
-					/>
-					<Route
-						exact
-						path="/trending"
-						render={() => (loading ? <Loading /> : <Trending songNFTs={songNFTs} />)}
-					/>
+					<Route exact path="/library" render={() => (loading ? <Loading /> : <Library songNFTs={songNFTs} />)} />
+					<Route exact path="/trending" render={() => (loading ? <Loading /> : <Trending songNFTs={songNFTs} />)} />
 					<Route
 						exact
 						path="/create"
-						render={() => (
-							<Create
-								createSong={createSong}
-								captureImage={captureImage}
-								captureLyrics={captureLyrics}
-								captureSong={captureSong}
-								songNFTs={songNFTs}
-							/>
-						)}
+						render={() => <Create createSong={createSong} captureImage={captureImage} captureLyrics={captureLyrics} captureSong={captureSong} songNFTs={songNFTs} />}
 					/>
-					<Route
-						exact
-						path="/dashboard"
-						render={() => (loading ? <Loading /> : <Dashboard account={account} songNFTs={songNFTs} />)}
-					/>
-					<Route exact path="/contact-us" component={ContactUs} />
+					<Route exact path="/dashboard" render={() => (loading ? <Loading /> : <Dashboard account={account} songNFTs={songNFTs} />)} />
 					<Redirect to="/" />
 				</Switch>
 			</div>
-			<Footer />
 		</HashRouter>
 	);
 }
